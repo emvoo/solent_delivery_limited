@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.staff.HomeStaffController">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" layoutX="-33.0" layoutY="137.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <VBox layoutX="70.0" layoutY="53.0" prefHeight="766.0" prefWidth="301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <ToggleButton mnemonicParsing="false" onAction="#homeAction" prefHeight="50.0" prefWidth="200.0" text="Home">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="menuBtns" />
+                                            </toggleGroup>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </ToggleButton>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                        <ToggleButton mnemonicParsing="false" onAction="#viewDeliveriesAction" prefHeight="50.0" prefWidth="200.0" text="View deliveries" toggleGroup="$menuBtns">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </ToggleButton>
+                           </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton fx:id="viewClientsBtn" mnemonicParsing="false" onAction="#viewClientsAction" prefHeight="50.0" prefWidth="200.0" text="View clients" toggleGroup="$menuBtns">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </ToggleButton>
+                           </children></HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton fx:id="viewStaffBtn" mnemonicParsing="false" onAction="#viewStaffAction" prefHeight="50.0" prefWidth="200.0" text="View Staff" toggleGroup="$menuBtns">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </ToggleButton>
+                           </children></HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="200.0" style="-fx-border-radius: 5;" text="Logout">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="rightPanelAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

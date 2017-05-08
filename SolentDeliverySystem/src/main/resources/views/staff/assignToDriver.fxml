@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.staff.AssignToDriverController">
+   <children>
+      <Label fx:id="deliveryId" alignment="CENTER" text="Label" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="drivers" prefHeight="50.0" prefWidth="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="175.0" />
+      <Button layoutX="138.0" layoutY="334.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="50.0" prefWidth="150.0" text="Cancel" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" />
+      <Button layoutX="400.0" layoutY="334.0" mnemonicParsing="false" onAction="#assignAction" prefHeight="50.0" prefWidth="150.0" text="Assign" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

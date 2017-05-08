@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="766.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.staff.ViewStaffController">
+<children>
+    <VBox alignment="TOP_CENTER" layoutX="220.0" layoutY="54.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Label prefHeight="100.0" text="Staff">
+                <font>
+                    <Font name="System Bold" size="50.0" />
+                </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#viewDeliveriesAction" prefHeight="35.0" prefWidth="150.0" text="View deliveris" />
+                    <Button mnemonicParsing="false" onAction="#editStaffAction" prefHeight="35.0" prefWidth="150.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#deactivateAction" prefHeight="35.0" prefWidth="150.0" text="(De)activate" />
+                </children>
+            </HBox>
+            <TableView fx:id="staffTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="id" prefWidth="139.0" text="ID" />
+                  <TableColumn fx:id="username" prefWidth="75.0" text="Username" />
+                    <TableColumn fx:id="name" prefWidth="142.0" text="Name" />
+                    <TableColumn fx:id="surname" prefWidth="59.0" text="Surname" />
+                    <TableColumn fx:id="street" minWidth="8.0" prefWidth="84.0" text="Street" />
+                    <TableColumn fx:id="postCode" prefWidth="75.0" text="Post Code" />
+                    <TableColumn fx:id="city" prefWidth="75.0" text="City" />
+                  <TableColumn fx:id="active" prefWidth="75.0" text="Active" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </children>
+    </VBox>
+</children>
+</AnchorPane>

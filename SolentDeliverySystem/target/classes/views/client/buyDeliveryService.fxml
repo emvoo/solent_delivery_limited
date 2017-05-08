@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.client.BuyDeliveryServiceController">
+   <children>
+      <VBox prefHeight="666.0" prefWidth="713.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Details of your parcel">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="713.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <Label text="Dimensions (cm):">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <TextField fx:id="lengthField" maxWidth="150.0" prefWidth="150.0" promptText="length">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="lengthErrorField" alignment="CENTER" maxWidth="150.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <Label text="x">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <TextField fx:id="widthField" maxWidth="150.0" prefWidth="150.0" promptText="width">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="widthErrorField" alignment="CENTER" maxWidth="150.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <Label text="x">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0">
+                     <children>
+                        <TextField fx:id="depthField" maxWidth="150.0" prefWidth="150.0" promptText="depth">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="depthErrorField" alignment="CENTER" maxWidth="150.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="75.0">
+               <children>
+                  <GridPane VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="weightField" onKeyReleased="#updatePrice" promptText="weight">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="weigthErrorField" alignment="CENTER" maxWidth="150.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="kg">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="contentsField" promptText="contents">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="contentsErrorField" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="266.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ComboBox fx:id="existingRecipinets" prefHeight="30.0" prefWidth="250.0" promptText="Select existing recipient" />
+                              <Label fx:id="addressComboErrorField" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label text="OR">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" right="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#showAddAddressBox" prefHeight="30.0" prefWidth="200.0" text="Add New Address">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Label />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox fx:id="addressFields" prefHeight="200.0" prefWidth="100.0" visible="false">
+                     <children>
+                        <GridPane prefHeight="200.0" prefWidth="713.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <TextField fx:id="nameField" editable="false" promptText="Name">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="50.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <TextField fx:id="surnameField" editable="false" promptText="Surname" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="50.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="houseNoField" editable="false" promptText="House/Flat No" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="streetNameField" editable="false" promptText="Street Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="50.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="postCodeField" editable="false" promptText="Post Code" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="cityField" editable="false" promptText="City" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children></VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="222.0" prefWidth="713.0">
+               <children>
+                  <Label fx:id="deliveryServiceType" text="Select delivery service type">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <RadioButton fx:id="standard" mnemonicParsing="false" text="Standard (3-5 working days)">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="deliveryTypeGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                           <children>
+                              <RadioButton fx:id="nxtDay" mnemonicParsing="false" text="24+ (1-3 working days)" toggleGroup="$deliveryTypeGroup" GridPane.rowIndex="1" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="2">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="Express (next working day guaranteed)" toggleGroup="$deliveryTypeGroup" GridPane.rowIndex="2" fx:id="xpress" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <HBox fx:id="priceHolder" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false">
+                                 <children>
+                                    <Label text="Price: ">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="£">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="priceField" text="0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <HBox alignment="CENTER_RIGHT" minHeight="50.0" prefHeight="50.0">
+                     <children>
+                        <HBox alignment="CENTER" minHeight="50.0" prefHeight="50.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#buyDeliveryService" prefHeight="50.0" prefWidth="200.0" text="Buy delivery service">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

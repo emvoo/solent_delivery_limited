@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="766.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.staff.GetDeliveriesController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="220.0" layoutY="54.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="100.0" text="Deliveries">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="125.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="todays" mnemonicParsing="false" text="Todays">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="deliveriesGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="pending" mnemonicParsing="false" text="Pending" toggleGroup="$deliveriesGroup" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="125.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="delivered" mnemonicParsing="false" text="Delivered" toggleGroup="$deliveriesGroup" />
+                        <RadioButton fx:id="cancelled" mnemonicParsing="false" text="Cancelled" toggleGroup="$deliveriesGroup" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#assignToDriverAction" prefHeight="35.0" prefWidth="125.0" text="Assign To Driver" />
+                  <Button mnemonicParsing="false" onAction="#cancelDeliveryAction" prefHeight="35.0" prefWidth="125.0" text="Cancel Delivery" />
+                  <Button mnemonicParsing="false" onAction="#setDeliveredAction" prefHeight="35.0" prefWidth="125.0" text="Set delivered" />
+               </children>
+            </HBox>
+            <TableView fx:id="deliveriesTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="receiverName" prefWidth="139.0" text="Receiver Name" />
+                  <TableColumn fx:id="deliveryType" prefWidth="142.0" text="Delivery Type" />
+                  <TableColumn fx:id="price" prefWidth="59.0" text="Price" />
+                  <TableColumn fx:id="datePurchased" minWidth="8.0" prefWidth="84.0" text="Date Purchased" />
+                  <TableColumn fx:id="datePredicted" prefWidth="75.0" text="Expected Delivery" />
+                  <TableColumn fx:id="dateDelivered" prefWidth="75.0" text="Date Delivered" />
+                  <TableColumn fx:id="cancelledCol" prefWidth="75.0" text="Cancelled" />
+                  <TableColumn fx:id="assigned" prefWidth="75.0" text="Assigned" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

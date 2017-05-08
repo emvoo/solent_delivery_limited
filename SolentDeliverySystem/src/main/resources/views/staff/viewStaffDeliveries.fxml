@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.staff.ViewStaffDeliveriesController">
+   <children>
+      <VBox layoutX="450.0" layoutY="119.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="staffLabel" text="Label">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <RadioButton fx:id="inProgress" mnemonicParsing="false" text="In progress">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioBtns" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="completed" mnemonicParsing="false" text="Completed" toggleGroup="$radioBtns" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="staffDeliveriesTable" prefHeight="200.0" prefWidth="1000.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="id" minWidth="75.0" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="deliveryAreaPostCode" minWidth="100.0" prefWidth="128.0" text="Area Post Code" />
+                        <TableColumn minWidth="100.0" prefWidth="250.0" text="From">
+                           <columns>
+                              <TableColumn fx:id="clientID" prefWidth="109.0" text="Client ID" />
+                              <TableColumn fx:id="streetFrom" prefWidth="109.0" text="Street" />
+                              <TableColumn fx:id="postCodeFrom" prefWidth="109.0" text="PostCode" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn minWidth="100.0" prefWidth="250.0" text="To">
+                           <columns>
+                              <TableColumn fx:id="streetTo" prefWidth="109.0" text="Street" />
+                              <TableColumn fx:id="postCodeTo" prefWidth="109.0" text="Post Code" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="expectedDate" minWidth="100.0" prefWidth="125.0" text="Expected Date" />
+                        <TableColumn fx:id="deliveredDate" minWidth="100.0" prefWidth="125.0" text="Delivered Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
